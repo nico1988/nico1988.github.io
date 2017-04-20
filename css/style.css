@@ -392,8 +392,8 @@ body >header {
   width: 100%;
   -webkit-box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
-  background: url("../") center #2ca6cb;
-  color: #fff;
+  background: url("../") center #24292e;
+  color: rgba(255,255,255,0.75);
   padding: 1em 0 0.8em;
 }
 @media only screen and (min-width: 1024px) {
@@ -414,7 +414,8 @@ body >header >div {
 }
 body >header a {
   display: block;
-  color: #fff;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 1px 1px -1px -1px #f00;
 }
 #imglogo {
   float: left;
