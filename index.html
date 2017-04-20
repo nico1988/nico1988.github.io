@@ -83,6 +83,65 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/04/20/词法作用域/" title="词法作用域" itemprop="url">词法作用域</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-20T05:30:38.000Z" itemprop="datePublished"> 发表于 2017-04-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h1><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>域表示的就是 范围, 即 作用范围. 就是一个名字在什么地方可以被使用, 什么时候不能使用.</p>
+<h3 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h3><p>即块级别的作用范围<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 在 C , Java 等编程语言中, 下面的语法报错</div><div class="line">&#123;</div><div class="line">    var num = 123;  // int </div><div class="line">    &#123;</div><div class="line">        console.log( num ); // =&gt; 123</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log( num ); // 报错</div></pre></td></tr></table></figure></p>
+<h3 id="在-js-中采用词法作用域"><a href="#在-js-中采用词法作用域" class="headerlink" title="在 js 中采用词法作用域"></a>在 js 中采用词法作用域</h3><p>所谓的 词法( 代码 )作用域, 就是代码在编写过程中体现出来的作用范围. 代码一旦写好, 不用执行,<br>作用范围就已经确定好了. 这个就是所谓词法作用域.</p>
+<p>在 js 中词法作用域规则:</p>
+<ol>
+<li>函数允许访问函数外的数据.</li>
+<li>整个代码结构中只有函数可以限定作用域.</li>
+<li>作用规则首先使用提升规则分析</li>
+<li>如果当前作用规则中有名字了, 就不考虑外面的名字</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/04/19/hexo/" title="my first hexo blog article" itemprop="url">my first hexo blog article</a>
   </h1>
   <p class="article-author">By
@@ -104,6 +163,61 @@ hexo generate
 
 hexo deploy
 </code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/19/my-first-hexo-blog-article/" title="my first hexo blog article" itemprop="url">my first hexo blog article</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-19T14:09:34.000Z" itemprop="datePublished"> 发表于 2017-04-19</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>##你好，欢迎来到我的个人技术博客。<br>这是我的第一次写作，希望有个很好的开端</p>
+<p>关于创建这个博客的用意<br></p>
+<p>###交流技术</p>
+<p>###记录心得</p>
+<p>###交流想法</p>
+<p>###谈谈心得</p>
+
         
         
         <p class="article-more-link">
@@ -162,61 +276,6 @@ hexo deploy
 <p>###新问题来了<br><img src="6.png" alt=""></p>
 <h3 id="输入-用户名-github-io-index-html-试一下，如果可以等待几分钟再打开，就可以了"><a href="#输入-用户名-github-io-index-html-试一下，如果可以等待几分钟再打开，就可以了" class="headerlink" title="输入  用户名.github.io/index.html 试一下，如果可以等待几分钟再打开，就可以了"></a>输入  用户名.github.io/index.html 试一下，如果可以等待几分钟再打开，就可以了</h3><h3 id="修改作者名字"><a href="#修改作者名字" class="headerlink" title="修改作者名字"></a>修改作者名字</h3><p><img src="7.png" alt=""></p>
 <hr>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/04/19/my-first-hexo-blog-article/" title="my first hexo blog article" itemprop="url">my first hexo blog article</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
-		
-  <p class="article-time">
-    <time datetime="2017-04-19T14:09:34.000Z" itemprop="datePublished"> 发表于 2017-04-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>##你好，欢迎来到我的个人技术博客。<br>这是我的第一次写作，希望有个很好的开端</p>
-<p>关于创建这个博客的用意<br></p>
-<p>###交流技术</p>
-<p>###记录心得</p>
-<p>###交流想法</p>
-<p>###谈谈心得</p>
 
         
         

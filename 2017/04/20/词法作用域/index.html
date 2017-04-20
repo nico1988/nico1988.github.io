@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>my first hexo blog article | Nico&#39;s blog</title>
+    <title>词法作用域 | Nico&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="nico xia">
     
 
     
-    <meta name="description" content="hexo 常用命令hexo new “postName” #新建文章hexo new page “pageName” #新建页面hexo generate #生成静态页面至public目录hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）hexo deploy #将.deploy目录部署到GitHubhexo help  #查看帮助hexo ver">
+    <meta name="description" content="词法作用域作用域域表示的就是 范围, 即 作用范围. 就是一个名字在什么地方可以被使用, 什么时候不能使用. 块级作用域即块级别的作用范围12345678// 在 C , Java 等编程语言中, 下面的语法报错&amp;#123;    var num = 123;  // int     &amp;#123;        console.log( num ); // =&amp;gt; 123    &amp;#125;&amp;">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first hexo blog article">
-<meta property="og:url" content="http://yoursite.com/2017/04/19/hexo/index.html">
+<meta property="og:title" content="词法作用域">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/词法作用域/index.html">
 <meta property="og:site_name" content="Nico's blog">
-<meta property="og:description" content="hexo 常用命令hexo new “postName” #新建文章hexo new page “pageName” #新建页面hexo generate #生成静态页面至public目录hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）hexo deploy #将.deploy目录部署到GitHubhexo help  #查看帮助hexo ver">
-<meta property="og:updated_time" content="2017-04-19T15:56:21.862Z">
+<meta property="og:description" content="词法作用域作用域域表示的就是 范围, 即 作用范围. 就是一个名字在什么地方可以被使用, 什么时候不能使用. 块级作用域即块级别的作用范围12345678// 在 C , Java 等编程语言中, 下面的语法报错&amp;#123;    var num = 123;  // int     &amp;#123;        console.log( num ); // =&amp;gt; 123    &amp;#125;&amp;">
+<meta property="og:updated_time" content="2017-04-20T05:39:56.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my first hexo blog article">
-<meta name="twitter:description" content="hexo 常用命令hexo new “postName” #新建文章hexo new page “pageName” #新建页面hexo generate #生成静态页面至public目录hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）hexo deploy #将.deploy目录部署到GitHubhexo help  #查看帮助hexo ver">
+<meta name="twitter:title" content="词法作用域">
+<meta name="twitter:description" content="词法作用域作用域域表示的就是 范围, 即 作用范围. 就是一个名字在什么地方可以被使用, 什么时候不能使用. 块级作用域即块级别的作用范围12345678// 在 C , Java 等编程语言中, 下面的语法报错&amp;#123;    var num = 123;  // int     &amp;#123;        console.log( num ); // =&amp;gt; 123    &amp;#125;&amp;">
 
     
     <link rel="alternative" href="/atom.xml" title="Nico&#39;s blog" type="application/atom+xml">
@@ -83,14 +83,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/19/hexo/" title="my first hexo blog article" itemprop="url">my first hexo blog article</a>
+      <a href="/2017/04/20/词法作用域/" title="词法作用域" itemprop="url">词法作用域</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-19T14:09:34.000Z" itemprop="datePublished"> 发表于 2017-04-19</time>
+    <time datetime="2017-04-20T05:30:38.000Z" itemprop="datePublished"> 发表于 2017-04-20</time>
     
   </p>
 </header>
@@ -99,18 +99,21 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#词法作用域"><span class="toc-number">1.</span> <span class="toc-text">词法作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#作用域"><span class="toc-number">1.1.</span> <span class="toc-text">作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#块级作用域"><span class="toc-number">1.1.1.</span> <span class="toc-text">块级作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-js-中采用词法作用域"><span class="toc-number">1.1.2.</span> <span class="toc-text">在 js 中采用词法作用域</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<p>hexo 常用命令<br>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #将.deploy目录部署到GitHub<br>hexo help  #查看帮助<br>hexo version  #查看Hexo的版本</p>
-<p>每次部署的步骤，可按以下三步来进行。</p>
-<pre><code>hexo clean
-
-hexo generate
-
-hexo deploy
-</code></pre>  
+		<h1 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h1><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>域表示的就是 范围, 即 作用范围. 就是一个名字在什么地方可以被使用, 什么时候不能使用.</p>
+<h3 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h3><p>即块级别的作用范围<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 在 C , Java 等编程语言中, 下面的语法报错</div><div class="line">&#123;</div><div class="line">    var num = 123;  // int </div><div class="line">    &#123;</div><div class="line">        console.log( num ); // =&gt; 123</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log( num ); // 报错</div></pre></td></tr></table></figure></p>
+<h3 id="在-js-中采用词法作用域"><a href="#在-js-中采用词法作用域" class="headerlink" title="在 js 中采用词法作用域"></a>在 js 中采用词法作用域</h3><p>所谓的 词法( 代码 )作用域, 就是代码在编写过程中体现出来的作用范围. 代码一旦写好, 不用执行,<br>作用范围就已经确定好了. 这个就是所谓词法作用域.</p>
+<p>在 js 中词法作用域规则:</p>
+<ol>
+<li>函数允许访问函数外的数据.</li>
+<li>整个代码结构中只有函数可以限定作用域.</li>
+<li>作用规则首先使用提升规则分析</li>
+<li>如果当前作用规则中有名字了, 就不考虑外面的名字</li>
+</ol>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -122,7 +125,7 @@ hexo deploy
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/19/hexo/" data-title="my first hexo blog article | Nico&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/20/词法作用域/" data-title="词法作用域 | Nico&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -136,21 +139,13 @@ hexo deploy
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/04/19/hello-world/" title="Hello World">
+ <a href="/2017/04/19/problems/" title="problems">
   <strong>上一篇：</strong><br/>
   <span>
-  Hello World</span>
+  problems</span>
 </a>
 </div>
 
-
-<div class="next">
-<a href="/2017/04/19/my-first-hexo-blog-article/"  title="my first hexo blog article">
- <strong>下一篇：</strong><br/> 
- <span>my first hexo blog article
-</span>
-</a>
-</div>
 
 </nav>
 
@@ -162,7 +157,7 @@ hexo deploy
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#词法作用域"><span class="toc-number">1.</span> <span class="toc-text">词法作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#作用域"><span class="toc-number">1.1.</span> <span class="toc-text">作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#块级作用域"><span class="toc-number">1.1.1.</span> <span class="toc-text">块级作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-js-中采用词法作用域"><span class="toc-number">1.1.2.</span> <span class="toc-text">在 js 中采用词法作用域</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
