@@ -415,7 +415,10 @@ body >header >div {
 body >header a {
   display: block;
   color: rgba(255,255,255,0.75);
-  text-shadow: 1px 1px -1px -1px #f00;
+  text-shadow: 5px 5px 5px #f00, -5px -5px 5px #f00;
+}
+body >header a:hover {
+  color: #fff;
 }
 #imglogo {
   float: left;
