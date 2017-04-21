@@ -64,6 +64,17 @@
       }
     });
   });
+  //点击汉堡菜单事件，覆盖掉之前的
+  document.querySelector(".navbar").onclick = function(){
+    var isClick = true;
+    if(isClick){
+       $(".animated ").show(3000);
+       isClick = false;
+    }else{
+       $(".animated ").hide();
+       isClick = false;
+    }
+  }
   //点击隐藏导航事件
   $("body>header").on("click",function(e){
     e.stopPropagation();//点击header(第一个header)不冒泡往上到body
