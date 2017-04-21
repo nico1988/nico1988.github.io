@@ -453,8 +453,9 @@ body >header a:hover {
   }
 }
 #textlogo {
-  float: left;
-  width: 75%;
+  position: absolute;
+  left: 150px;
+  width: 50%;
   margin-left: 0.5em;
 }
 #textlogo h1.site-name {
@@ -491,9 +492,10 @@ body >header a:hover {
 }
 .navbar {
   position: absolute;
+  z-index: 11;
   width: 2em;
   right: 0em;
-  top: 1em;
+  top: 8px;
   padding: 0.5em;
 }
 @media only screen and (min-width: 1024px) {
@@ -511,12 +513,10 @@ body >header a:hover {
   padding-left: 1em;
 }
 header nav {
-  position: absolute;
-  right: 10px;
+  color: #000;
   float: left;
   width: 100%;
   font-size: 112.5%;
-  padding-top: 0.5em;
   max-height: 0.01em;
   -webkit-transition: max-height 1s ease-out;
   -moz-transition: max-height 1s ease-out;
@@ -526,7 +526,7 @@ header nav {
 }
 @media only screen and (min-width: 568px) {
   header nav {
-    width: 50%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -556,7 +556,7 @@ header nav ul li a {
   }
 }
 header nav ul li a:hover {
-  background: #1b7f9e;
+  background: #30b2e6;
   color: #e9cd4c;
 }
 .shownav {
