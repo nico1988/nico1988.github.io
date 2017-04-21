@@ -454,12 +454,20 @@ body >header a:hover {
 }
 #textlogo {
   position: absolute;
-  left: 150px;
-  width: 50%;
-  margin-left: 0.5em;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 300px) {
+  #textlogo #textlogo {
+    background-color: #add8e6;
+  }
 }
 #textlogo h1.site-name {
-  width: 86%;
+  text-align: center;
   font-family: "covered_by_your_graceregular";
   font-size: 200%;
   line-height: 1.5;

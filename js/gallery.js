@@ -64,4 +64,14 @@
       }
     });
   });
+  //点击隐藏导航事件
+  $("body>header").on("click",function(e){
+    e.stopPropagation();//点击header(第一个header)不冒泡往上到body
+  })
+  $("body").on("click",function(){
+    if($("nav").hasClass("shownav")){
+      $(".navbar").trigger("click");//点击body(除header).触发navbar的点击事件
+    }
+  })
+
 })(jQuery);
