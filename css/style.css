@@ -390,8 +390,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 body >header {
   width: 100%;
-  -webkit-box-shadow: 2px 4px 5px #800000;
-  box-shadow: 2px 4px 5px #800000;
+  -webkit-box-shadow: 2px 4px 5px #87ceeb;
+  box-shadow: 2px 4px 5px #87ceeb;
   position: fixed;
   top: 0;
   left: 0;
@@ -674,11 +674,11 @@ header nav ul li a:hover {
 #main article.post-expand:hover {
   -webkit-box-shadow: 10px 10px 10px #c0c0c0;
   box-shadow: 10px 10px 10px #c0c0c0;
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  -o-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
-  transform: translateY(-5px);
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -718,6 +718,23 @@ header nav ul li a:hover {
   background: #2ca6cb;
   color: #fff;
   text-decoration: none;
+}
+#main article.post-expand footer:hover .article-tags span {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -o-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
 }
 #archive-page section.post a {
   font-size: 0.9em;
