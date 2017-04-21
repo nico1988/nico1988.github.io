@@ -117,9 +117,10 @@
         isMove = true;
         /*这里要注意要加px*/
         var width = $("div.touch_out").width();
-        if(distanceX>0){//如果向右滑动，隐藏盒子向右移出
+        console.log(distanceX);
+        if(distanceX>40){//如果向右滑动距离大于40，隐藏盒子向右移出
           setTranslateX(width);//如果没有超出边界，就移动
-        }else{//如果向左滑动，隐藏盒子向左移出
+        }else if(distanceX<-40){//如果向左滑动，隐藏盒子向左移出
           setTranslateX(-width);//如果没有超出边界，就移动
         }
         addTransition();
