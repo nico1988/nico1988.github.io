@@ -402,7 +402,7 @@ body >header {
 }
 @media only screen and (min-width: 1024px) {
   body >header {
-    padding: 1.8em 0 1.5em;
+    padding: 10px 0 10px;
   }
 }
 body >header >div {
@@ -511,6 +511,8 @@ body >header a:hover {
   padding-left: 1em;
 }
 header nav {
+  position: absolute;
+  right: 10px;
   float: left;
   width: 100%;
   font-size: 112.5%;
@@ -531,7 +533,7 @@ header nav {
   header nav {
     float: right;
     width: auto;
-    margin-top: 1em;
+    margin-top: 10px;
     max-height: none;
   }
 }
@@ -594,6 +596,7 @@ header nav ul li a:hover {
   -webkit-flex: 1;
   width: 95%;
   margin: 0 auto;
+  margin-top: 87px;
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
