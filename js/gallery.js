@@ -133,9 +133,10 @@
         isMove = true;
         /*这里要注意要加px*/
         var width = $("div.touch_out").width();
-        if(distanceX>40){//如果向右滑动距离大于40，隐藏盒子向右移出
+        //点击区域在屏幕左边两百范围以内，才发生侧滑事件
+        if(distanceX>40 && startX<=225){//如果向右滑动距离大于40，隐藏盒子向右移出
           setTranslateX(width);//如果没有超出边界，就移动
-        }else if(distanceX<-40){//如果向左滑动，隐藏盒子向左移出
+        }else if(distanceX<-40 && startX<=225){//如果向左滑动，隐藏盒子向左移出
           setTranslateX(-width);//如果没有超出边界，就移动
         }
         addTransition();
