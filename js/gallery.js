@@ -90,7 +90,7 @@
   var nav_html = $("nav.animated>ul").html();
   var div_aside = $('<div class="touch_out"></div>');
   $(div_aside).html(nav_html).css({"position":"fixed","top":$("body>header")[0].offsetHeight,"zIndex":30,"background":"rgba(135,206,235,.9)","height":"100%"}).find("li").css({"padding":"15px","borderBottom":"1px solid pink"});
-  $(".touch_out").css({"left":"-225px"});
+  $(".touch_out").css({"left":"-250px"});
   $("body").append(div_aside);
   var left = $(".touch_out").width()+"px";
   $("div.touch_out").css({"left":"-225px"});
