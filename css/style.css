@@ -526,11 +526,11 @@ header nav {
   width: 100%;
   font-size: 112.5%;
   max-height: 0.01em;
-  -webkit-transition: max-height 0.4s ease-out;
-  -moz-transition: max-height 0.4s ease-out;
-  -o-transition: max-height 0.4s ease-out;
-  -ms-transition: max-height 0.4s ease-out;
-  transition: max-height 0.4s ease-out;
+  -webkit-transition: max-height 0.3s ease-out;
+  -moz-transition: max-height 0.3s ease-out;
+  -o-transition: max-height 0.3s ease-out;
+  -ms-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 @media only screen and (min-width: 568px) {
   header nav {

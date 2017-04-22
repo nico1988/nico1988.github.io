@@ -124,7 +124,7 @@
         startX = e.originalEvent.touches[0].clientX - distanceX;
       })
       $("body").on("touchmove",function(e){
-        //如果已经点击过汉堡按钮,让导航弹上去
+        //如果已经点击过，只要窗口滑动，让nav弹上去
         if($("nav").hasClass("shownav")){
           $(".navbar").trigger("click");//点击body(除header).触发navbar的点击事件,菜单隐藏
         }
