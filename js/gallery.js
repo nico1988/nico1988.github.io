@@ -93,7 +93,7 @@
   $("body").append(div_aside);
   var left = $(".touch_out").width()+"px";
   $("div.touch_out").css({"left":"-225px"});
-  touch();//触摸屏幕显示侧边栏
+  // touch();//触摸屏幕显示侧边栏
   function touch(event){
       //算的时候一定要带单位
       //让菜单滑动
@@ -133,6 +133,7 @@
         isMove = true;
         /*这里要注意要加px*/
         var width = $("div.touch_out").width();
+        console.log(width);
         console.log(distanceX);
         if(distanceX>40){//如果向右滑动距离大于40，隐藏盒子向右移出
           setTranslateX(width);//如果没有超出边界，就移动
