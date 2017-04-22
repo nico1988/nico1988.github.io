@@ -92,7 +92,7 @@
   $(div_aside).html(nav_html).css({"position":"fixed","left":"-225px","top":$("body>header")[0].offsetHeight,"zIndex":30,"background":"rgba(135,206,235,.9)","height":"100%"}).find("li").css({"padding":"15px","borderBottom":"1px solid pink"});
   $("body").append(div_aside);
   var left = $(".touch_out").width()+"px";
-  $("div.touch_out").css({"left":-left});
+  $("div.touch_out").css({"left":"-225px"});
   touch();//触摸屏幕显示侧边栏
   function touch(event){
       //算的时候一定要带单位
