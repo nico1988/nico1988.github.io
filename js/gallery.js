@@ -89,9 +89,9 @@
   //创建div，让其html等于nav的值
   var nav_html = $("nav.animated>ul").html();
   var div_aside = $('<div class="touch_out"></div>');
-  $(div_aside).html(nav_html).css({"position":"fixed","top":$("body>header")[0].offsetHeight,"zIndex":30,"background":"rgba(135,206,235,.9)","height":"100%"}).find("li").css({"padding":"15px","borderBottom":"1px solid pink"});
+  $(div_aside).html(nav_html).css({"width":"225px","position":"fixed","top":$("body>header")[0].offsetHeight,"zIndex":30,"background":"rgba(135,206,235,.9)","height":"100%"}).find("li").css({"padding":"15px","borderBottom":"1px solid pink"});
   $("body").append(div_aside);
-  $(".touch_out").css({"right":"-225px"});
+  $(".touch_out").css({"left":"-225px"});
   console.log($("body").width()+$(".touch_out").width());
   var left = $(".touch_out").width()+"px";
   $("div.touch_out").css({"left":"-225px"});
@@ -135,8 +135,6 @@
         isMove = true;
         /*这里要注意要加px*/
         var width = $("div.touch_out").width();
-        console.log(width);
-        console.log(distanceX);
         if(distanceX>40){//如果向右滑动距离大于40，隐藏盒子向右移出
           setTranslateX(width);//如果没有超出边界，就移动
         }else if(distanceX<-40){//如果向左滑动，隐藏盒子向左移出
