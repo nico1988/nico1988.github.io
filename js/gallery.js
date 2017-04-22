@@ -79,12 +79,14 @@
   $("body>header").on("click",function(e){
     e.stopPropagation();//点击header(第一个header)不冒泡往上到body
   })
+  //点击除herder以外的窗体让导航条弹回
   $("body").on("click",function(){
     //如果已经点击过汉堡按钮,让导航弹上去
     if($("nav").hasClass("shownav")){
       $(".navbar").trigger("click");//点击body(除header).触发navbar的点击事件,菜单隐藏
     }
   })
+  
   //滑动事件
   //创建div，让其html等于nav的值
   var nav_html = $("nav.animated>ul").html();
@@ -111,11 +113,23 @@
           $("div.touch_out").css({"-webkit-transform":'translateX('+y+'px)'});
           $("div.touch_out").css({"transform":'translateX('+y+'px)'});
       }
+      //如果侧滑已经弹出，点击汉堡菜单显示导航，让侧滑弹出
+      var isMove = false;//全局变量，判断侧滑是否滑出
+      $(".navbar").on("click",function(){
+        if(isMove){
+          console.log("已经移动了");
+          setTranslateX(-225);//如果没有超出边界，就移动
+          isMove = false;//如果已经滑动回去了，让ismove为false
+          addTransition();
+          
+        }else{
+          console.log("没有移动")
+        }
+      })
       //点击屏幕,让侧边栏显示出来
       var startX = 0;
       var moveX =0;
       var distanceX = 0;
-      var isMove = false;
       var currX = 0;//记录当前的定位，全局，相当于每次滑动到哪个位置
       $("body").on("touchstart",function(e){
         /*jquery e 返回的  originalEvent 就是原生js当中的 touchEvent*/
@@ -130,14 +144,15 @@
         }
         moveX = e.originalEvent.touches[0].clientX;
         distanceX = moveX - startX;
-        isMove = true;
         /*这里要注意要加px*/
         var width = $("div.touch_out").width();
         //点击区域在屏幕左边两百范围以内，才发生侧滑事件
         if(distanceX>40 && startX<=225){//如果向右滑动距离大于40，隐藏盒子向右移出
           setTranslateX(width);//如果没有超出边界，就移动
+          isMove = true;//如果滑动出来的话，让isMove成true
         }else if(distanceX<-40 && startX<=225){//如果向左滑动，隐藏盒子向左移出
           setTranslateX(-width);//如果没有超出边界，就移动
+          isMove = false;//如果已经滑动回去了，让ismove为false
         }
         addTransition();
       })
@@ -148,7 +163,6 @@
             startX = 0;
             moveX = 0;
             distanceX = 0;
-            isMove = false;
       })
     }
 })(jQuery);
