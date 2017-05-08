@@ -1,0 +1,1023 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>nico&#39;blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="nico xia">
+    
+
+    
+    <meta property="og:type" content="website">
+<meta property="og:title" content="nico'blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="nico'blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nico'blog">
+
+    
+    <link rel="alternative" href="/atom.xml" title="nico&#39;blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/nico's baby.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/nico's baby.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/nico's baby.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/nico&#39;s baby.png" alt="nico&#39;blog" title="nico&#39;blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="nico&#39;blog">nico&#39;blog</a></h1>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+						<li><a href="/contact me">contact</a></li>
+					
+						<li><a href="/">aaa</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/05/08/git常用命令/" title="git常用命令" itemprop="url">git常用命令</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-05-08T12:39:42.000Z" itemprop="datePublished"> Published 2017-05-08</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="查看、添加、提交、删除、找回，重置修改文件"><a href="#查看、添加、提交、删除、找回，重置修改文件" class="headerlink" title="查看、添加、提交、删除、找回，重置修改文件"></a>查看、添加、提交、删除、找回，重置修改文件</h3><p>git help <command> # 显示command的help</p>
+<p>git show # 显示某次提交的内容 git show $id</p>
+<p>git co – <file> # 抛弃工作区修改</file></p>
+<p>git co . # 抛弃工作区修改</p>
+<p>git add <file> # 将工作文件修改提交到本地暂存区</file></p>
+<p>git add . # 将所有修改过的工作文件提交暂存区</p>
+<p>git rm <file> # 从版本库中删除文件</file></p>
+<p>git rm <file> –cached # 从版本库中删除文件，但不删除文件</file></p>
+<p>git reset <file> # 从暂存区恢复到工作文件</file></p>
+<p>git reset – . # 从暂存区恢复到工作文件</p>
+<p>git reset –hard # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改</p>
+<p>git ci <file> git ci . git ci -a # 将git add, git rm和git ci等操作都合并在一起做　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　git ci -am “some comments”</file></p>
+<p>git ci –amend # 修改最后一次提交记录</p>
+<p>git revert &lt;$id&gt; # 恢复某次提交的状态，恢复动作本身也创建次提交对象</p>
+<p>git revert HEAD # 恢复最后一次提交的状态</p>
+<h3 id="查看文件diff"><a href="#查看文件diff" class="headerlink" title="查看文件diff"></a>查看文件diff</h3><p>git diff <file> # 比较当前文件和暂存区文件差异 git diff</file></p>
+<p>git diff <id1><id1><id2> # 比较两次提交之间的差异</id2></id1></id1></p>
+<p>git diff <branch1>..<branch2> # 在两个分支之间比较</branch2></branch1></p>
+<p>git diff –staged # 比较暂存区和版本库差异</p>
+<p>git diff –cached # 比较暂存区和版本库差异</p>
+<p>git diff –stat # 仅仅比较统计信息</p>
+<h3 id="查看提交记录"><a href="#查看提交记录" class="headerlink" title="查看提交记录"></a>查看提交记录</h3><p>git log git log <file> # 查看该文件每次提交记录</file></p>
+<p>git log -p <file> # 查看每次详细修改内容的diff</file></p>
+<p>git log -p -2 # 查看最近两次详细修改内容的diff</p>
+<p>git log –stat #查看提交统计信息</p>
+<p>tig</p>
+<p>Mac上可以使用tig代替diff和log，brew install tig</p>
+<p>Git 本地分支管理</p>
+<h3 id="查看、切换、创建和删除分支"><a href="#查看、切换、创建和删除分支" class="headerlink" title="查看、切换、创建和删除分支"></a>查看、切换、创建和删除分支</h3><p>git br -r # 查看远程分支</p>
+<p>git br <new_branch> # 创建新的分支</new_branch></p>
+<p>git br -v # 查看各个分支最后提交信息</p>
+<p>git br –merged # 查看已经被合并到当前分支的分支</p>
+<p>git br –no-merged # 查看尚未被合并到当前分支的分支</p>
+<p>git co <branch> # 切换到某个分支</branch></p>
+<p>git co -b <new_branch> # 创建新的分支，并且切换过去</new_branch></p>
+<p>git co -b <new_branch> <branch> # 基于branch创建新的new_branch</branch></new_branch></p>
+<p>git co $id # 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除</p>
+<p>git co $id -b <new_branch> # 把某次历史提交记录checkout出来，创建成一个分支</new_branch></p>
+<p>git br -d <branch> # 删除某个分支</branch></p>
+<p>git br -D <branch> # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</branch></p>
+<h3 id="分支合并和rebase"><a href="#分支合并和rebase" class="headerlink" title="分支合并和rebase"></a>分支合并和rebase</h3><p>git merge <branch> # 将branch分支合并到当前分支</branch></p>
+<p>git merge origin/master –no-ff # 不要Fast-Foward合并，这样可以生成merge提交</p>
+<p>git rebase master <branch> # 将master rebase到branch，相当于： git co <branch> &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge <branch></branch></branch></branch></p>
+<h3 id="Git补丁管理-方便在多台机器上开发同步时用"><a href="#Git补丁管理-方便在多台机器上开发同步时用" class="headerlink" title="Git补丁管理(方便在多台机器上开发同步时用)"></a>Git补丁管理(方便在多台机器上开发同步时用)</h3><p>git diff &gt; ../sync.patch # 生成补丁</p>
+<p>git apply ../sync.patch # 打补丁</p>
+<p>git apply –check ../sync.patch #测试补丁能否成功</p>
+<h3 id="Git暂存管理"><a href="#Git暂存管理" class="headerlink" title="Git暂存管理"></a>Git暂存管理</h3><p>git stash # 暂存</p>
+<p>git stash list # 列所有stash</p>
+<p>git stash apply # 恢复暂存的内容</p>
+<p>git stash drop # 删除暂存区</p>
+<h3 id="Git远程分支管理"><a href="#Git远程分支管理" class="headerlink" title="Git远程分支管理"></a>Git远程分支管理</h3><p>git pull # 抓取远程仓库所有分支更新并合并到本地</p>
+<p>git pull –no-ff # 抓取远程仓库所有分支更新并合并到本地，不要快进合并</p>
+<p>git fetch origin # 抓取远程仓库更新</p>
+<p>git merge origin/master # 将远程主分支合并到本地当前分支</p>
+<p>git co –track origin/branch # 跟踪某个远程分支创建相应的本地分支</p>
+<p>git co -b <local_branch> origin/<remote_branch> # 基于远程分支创建本地分支，功能同上</remote_branch></local_branch></p>
+<p>git push # push所有分支</p>
+<p>git push origin master # 将本地主分支推到远程主分支</p>
+<p>git push -u origin master # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)</p>
+<p>git push origin <local_branch> # 创建远程分支， origin是远程仓库名</local_branch></p>
+<p>git push origin <local_branch>:<remote_branch> # 创建远程分支</remote_branch></local_branch></p>
+<p>git push origin :<remote_branch> #先删除本地分支(git br -d <branch>)，然后再push删除远程分支</branch></remote_branch></p>
+<h3 id="Git远程仓库管理"><a href="#Git远程仓库管理" class="headerlink" title="Git远程仓库管理"></a>Git远程仓库管理</h3><p>GitHub</p>
+<p>git remote -v # 查看远程服务器地址和仓库名称</p>
+<p>git remote show origin # 查看远程服务器仓库状态</p>
+<p>git remote add origin git@ github:robbin/robbin_site.git # 添加远程仓库地址</p>
+<p>git remote set-url origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址) git remote rm <repository> # 删除远程仓库</repository></p>
+<h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p>git clone –bare robbin_site robbin_site.git # 用带版本的项目创建纯版本仓库</p>
+<p>scp -r my_project.git git@ git.csdn.net:~ # 将纯仓库上传到服务器上</p>
+<p>mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git –bare init # 在服务器创建纯仓库</p>
+<p>git remote add origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址</p>
+<p>git push -u origin master # 客户端首次提交</p>
+<p>git push -u origin develop # 首次将本地develop分支提交到远程develop分支，并且track</p>
+<p>git remote set-head origin master # 设置远程仓库的HEAD指向master分支</p>
+<h3 id="也可以命令设置跟踪远程库和本地库"><a href="#也可以命令设置跟踪远程库和本地库" class="headerlink" title="也可以命令设置跟踪远程库和本地库"></a>也可以命令设置跟踪远程库和本地库</h3><p>git branch –set-upstream master origin/master</p>
+<p>git branch –set-upstream develop origin/develop</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/git/">git</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/05/08/git-常用命令/" title="git 常用命令" itemprop="url">git 常用命令</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-05-08T12:34:43.000Z" itemprop="datePublished"> Published 2017-05-08</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/05/08/es6/" title="es6" itemprop="url">es6</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-05-08T08:50:26.000Z" itemprop="datePublished"> Published 2017-05-08</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><img src="http://oothzvg9p.bkt.clouddn.com/es6/eslogo.jpg" alt="es6 logo"></p>
+<p>ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015。</p>
+<p>也就是说，ES6就是ES2015。</p>
+<p>虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序员在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…</p>
+<p>在我们正式讲解ES6语法之前，我们得先了解下Babel。<br>Babel</p>
+<p>Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。大家可以选择自己习惯的工具来使用使用Babel，具体过程可直接在Babel官网查看：<br><a href="babeljs.io">babeljs.io</a></p>
+<p>附上我学习es6的思维导图</p>
+<h3 id="点击查看大图"><a href="#点击查看大图" class="headerlink" title="点击查看大图"></a><a href="http://oothzvg9p.bkt.clouddn.com/es6/es6%20lg.png" target="_blank" rel="external">点击查看大图</a></h3><p><img src="http://oothzvg9p.bkt.clouddn.com/es6/es6%20sm.jpg" alt="by nico"></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/es6/">es6</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/05/08/思维导图/" title="novamind" itemprop="url">novamind</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-05-08T03:43:43.000Z" itemprop="datePublished"> Published 2017-05-08</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/思维导图/">思维导图</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/05/05/定时器中的this指向问题/" title="JavaScript 定时器中 this的指向" itemprop="url">JavaScript 定时器中 this的指向</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-05-05T04:53:13.000Z" itemprop="datePublished"> Published 2017-05-05</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。"><a href="#使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。" class="headerlink" title="使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。"></a>使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。</h2><pre><code>var name = &apos;my name is window&apos;;
+var obj = {
+    name: &apos;my name is obj&apos;,
+    fn: function () {
+        var timer = null;
+        clearInterval(timer);
+        timer = setInterval(function () {
+            console.log(this.name);  //my name is window
+        }, 1000)
+    }
+}
+</code></pre><h5 id="在这里，从this-name可以看出this的指向是window。"><a href="#在这里，从this-name可以看出this的指向是window。" class="headerlink" title="在这里，从this.name可以看出this的指向是window。"></a>在这里，从this.name可以看出this的指向是window。</h5><h5 id="如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种："><a href="#如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种：" class="headerlink" title="如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种："></a>如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种：</h5><p>1、最常用的方法：在外部函数中将this存为一个变量，回调函数中使用该变量，而不是直接使用this。</p>
+<pre><code>var name = &apos;my name is window&apos;;
+var obj = {
+    name: &apos;my name is obj&apos;,
+    fn: function () {
+        var that = this;
+        var timer = null;
+        clearInterval(timer);
+        timer = setInterval(function () {
+            console.log(that.name);   //my name is obj
+        }, 1000)
+    }
+}
+</code></pre><h3 id="在fn中加了var-that-this-回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。"><a href="#在fn中加了var-that-this-回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。" class="headerlink" title="在fn中加了var that = this; 回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。"></a>在fn中加了var that = this; 回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。</h3><p>2、使用bind()方法（bind()为ES5的标准，低版本IE下有兼容问题，可以引入es5-shim.js解决）</p>
+<h5 id="bind-的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。"><a href="#bind-的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。" class="headerlink" title="bind()的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。"></a>bind()的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。</h5><pre><code>var name = &apos;my name is window&apos;;
+var obj = {
+    name: &apos;my name is obj&apos;,
+    fn: function () {
+        var timer = null;
+        clearInterval(timer);
+        timer = setInterval(function () {
+            console.log(this.name);   //my name is obj
+        }.bind(this), 1000)
+    }
+}
+</code></pre><h5 id="在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。"><a href="#在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。" class="headerlink" title="在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。"></a>在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。</h5><p>3、使用es6的箭头函数：箭头函数的最大作用就是this指向。</p>
+<pre><code>var name = &apos;my name is window&apos;;
+var obj = {
+    name: &apos;my name is obj&apos;,
+    fn: function () {
+        var timer = null;
+        clearInterval(timer);
+        timer = setInterval(() =&gt; {
+            console.log(this.name);  //my name is obj
+        }, 1000)
+    }
+}
+</code></pre><h5 id="箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim-js才可以。"><a href="#箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim-js才可以。" class="headerlink" title="箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim.js才可以。"></a>箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim.js才可以。</h5>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/javascript/">javascript</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/28/微信小程序开篇/" title="微信小程序之--开篇" itemprop="url">微信小程序之--开篇</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-28T02:43:16.000Z" itemprop="datePublished"> Published 2017-04-28</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="此为开篇，记录微信小程序的学习和挖坑经验"><a href="#此为开篇，记录微信小程序的学习和挖坑经验" class="headerlink" title="此为开篇，记录微信小程序的学习和挖坑经验"></a>此为开篇，记录微信小程序的学习和挖坑经验</h3><h4 id="微信小程序开发，看文下面这篇文章就够了，"><a href="#微信小程序开发，看文下面这篇文章就够了，" class="headerlink" title="微信小程序开发，看文下面这篇文章就够了，"></a>微信小程序开发，看文下面这篇文章就够了，</h4><h4 id="那就是-官方文档"><a href="#那就是-官方文档" class="headerlink" title="那就是: 官方文档"></a>那就是: <a href="https://mp.weixin.qq.com/debug/wxadoc/dev/" target="_blank" rel="external">官方文档</a></h4><p>初读小程序：开发者文档简单易懂，注册登录的什么不说，都是死的东西，至于api，组件，框架都是微信集成好了的，看几个小时就可以上手做项目</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/wxapp/">wxapp</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/19/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-19T13:49:20.166Z" itemprop="datePublished"> Published 2017-04-19</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/04/基于mvc思想的用户注册/" title="基于MVC思想的用户注册" itemprop="url">基于MVC思想的用户注册</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-04T08:26:01.000Z" itemprop="datePublished"> Published 2017-04-04</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="angular利用mvc思想实现注册小demo"><a href="#angular利用mvc思想实现注册小demo" class="headerlink" title="angular利用mvc思想实现注册小demo"></a>angular利用mvc思想实现注册小demo</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;注册案例&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 2.加上ng-app指令 --&gt;
+    &lt;!-- view 开始 --&gt;
+    &lt;table ng-app=&quot;myApp&quot; border=&quot;1&quot; ng-controller=&quot;demoController&quot;&gt;
+        &lt;tr&gt;
+            &lt;td&gt;用户名:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;username&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;密码:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;password&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;确认密码:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;confirm&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;是否同意:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;checkbox&quot; ng-model=&quot;isAgree&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;{{msg}}&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;注册按钮:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;button&quot; ng-click=&quot;register()&quot; value=&quot;注册&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;!-- view 结束 --&gt;
+    &lt;!-- 1.引入 anglar.js --&gt;
+    &lt;script src=&quot;node_modules/angular/angular.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // 3.创建模块
+        var app = angular.module(&apos;myApp&apos;,[]);
+        // controller 开始
+        // 4.创建控制器
+        app.controller(&apos;demoController&apos;,function($scope){
+            // 初始化数据模型
+            $scope.username=&apos;&apos;;
+            $scope.password=&apos;&apos;;
+            $scope.confirm=&apos;&apos;;
+            $scope.isAgree=false;
+            $scope.msg=&apos;&apos;;
+            // 初始化行为模型
+            $scope.register=function(){
+                // 进行数据校验
+                if($scope.username.length&gt;6){
+                    $scope.msg=&apos;用户名太长&apos;;
+                    return;
+                }
+
+                if($scope.password!=$scope.confirm){
+                    $scope.msg=&apos;确认密码和密码不相等&apos;;
+                    return;
+                }
+                if(!$scope.isAgree){
+                    $scope.msg=&apos;请同意用户协议&apos;;
+                    return;
+                }
+
+                var user = new User($scope.username,$scope.password);
+                var result = user.save();
+                if(result){
+                    $scope.msg=&apos;注册成功&apos;;
+
+                }else{
+                    $scope.msg=&apos;用户名已存在&apos;;
+                }
+            }
+        });
+        // controller 结束
+
+
+
+        // model  开始 创建User构造函数
+        function User(username,password){
+            this.username=username;
+            this.password=password;
+        }
+
+
+        User.prototype.save=function(){
+            //localStorage
+            var data = localStorage.getItem(&apos;user&apos;)||&apos;[]&apos;;
+            ///[{username:&apos;a&apos;},{username:&apos;b&apos;}]
+            var users = JSON.parse(data);
+
+            // 判断用户名是否存在
+            for (var i = 0; i &lt; users.length; i++) {
+                var item =users[i];
+                if(item.username==this.username){
+                    return false;
+                }
+            }
+            users.push({username:this.username,password:this.password});
+
+            localStorage.setItem(&apos;user&apos;,JSON.stringify(users));
+            return true;
+
+        }
+        // getUser
+        // model 结束
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/angular/">angular</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+
+  <nav id="page-nav" class="clearfix">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+  </nav>
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="nico1988" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/angular/" title="angular">angular<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/svn/" title="svn">svn<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/es6/" title="es6">es6<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/toll/" title="toll">toll<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/javascript/" title="javascript">javascript<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wxapp/" title="wxapp">wxapp<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/思维导图/" title="思维导图">思维导图<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue-js/" title="Vue.js">Vue.js<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">Tag Cloud</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/toll/" style="font-size: 10px;">toll</a> <a href="/tags/wxapp/" style="font-size: 10px;">wxapp</a> <a href="/tags/思维导图/" style="font-size: 10px;">思维导图</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://github.com/nico1988/" target="_blank" title="nico&#39;s Blog">nico&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+<div style="margin-top:10px;border:1px solid silver;text-align:center;box-sizing:content-box">
+	<div style="display:inline-block;text-align:center">
+    <a href="">微信:maosheng88</a>
+    <br>
+    <a href=""><img src="" alt="">
+      <img src="/img/weixin.png" style="width:135px;height:135px"/>
+    </a>
+    <br>
+    <span>email:<br/><b style="color:DodgerBlue">13574161925</b>@163.com</span
+  </div>
+</div>
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m nico xia . <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/nico1988" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="nico xia">nico xia</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+ </html>

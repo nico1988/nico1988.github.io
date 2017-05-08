@@ -1,0 +1,589 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>git常用命令 | nico&#39;blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="nico xia">
+    
+
+    
+    <meta name="description" content="查看、添加、提交、删除、找回，重置修改文件git help  # 显示command的help git show # 显示某次提交的内容 git show $id git co –  # 抛弃工作区修改 git co . # 抛弃工作区修改 git add  # 将工作文件修改提交到本地暂存区 git add . # 将所有修改过的工作文件提交暂存区 git rm  # 从版本库中删除文件 git">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git常用命令">
+<meta property="og:url" content="http://yoursite.com/2017/05/08/git常用命令/index.html">
+<meta property="og:site_name" content="nico'blog">
+<meta property="og:description" content="查看、添加、提交、删除、找回，重置修改文件git help  # 显示command的help git show # 显示某次提交的内容 git show $id git co –  # 抛弃工作区修改 git co . # 抛弃工作区修改 git add  # 将工作文件修改提交到本地暂存区 git add . # 将所有修改过的工作文件提交暂存区 git rm  # 从版本库中删除文件 git">
+<meta property="og:updated_time" content="2017-05-08T12:42:08.554Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git常用命令">
+<meta name="twitter:description" content="查看、添加、提交、删除、找回，重置修改文件git help  # 显示command的help git show # 显示某次提交的内容 git show $id git co –  # 抛弃工作区修改 git co . # 抛弃工作区修改 git add  # 将工作文件修改提交到本地暂存区 git add . # 将所有修改过的工作文件提交暂存区 git rm  # 从版本库中删除文件 git">
+
+    
+    <link rel="alternative" href="/atom.xml" title="nico&#39;blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/nico's baby.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/nico's baby.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/nico's baby.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/nico&#39;s baby.png" alt="nico&#39;blog" title="nico&#39;blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="nico&#39;blog">nico&#39;blog</a></h1>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+						<li><a href="/contact me">contact</a></li>
+					
+						<li><a href="/">aaa</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/05/08/git常用命令/" title="git常用命令" itemprop="url">git常用命令</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-05-08T12:39:42.000Z" itemprop="datePublished"> Published 2017-05-08</time>
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看、添加、提交、删除、找回，重置修改文件"><span class="toc-number">1.</span> <span class="toc-text">查看、添加、提交、删除、找回，重置修改文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看文件diff"><span class="toc-number">2.</span> <span class="toc-text">查看文件diff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看提交记录"><span class="toc-number">3.</span> <span class="toc-text">查看提交记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看、切换、创建和删除分支"><span class="toc-number">4.</span> <span class="toc-text">查看、切换、创建和删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支合并和rebase"><span class="toc-number">5.</span> <span class="toc-text">分支合并和rebase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git补丁管理-方便在多台机器上开发同步时用"><span class="toc-number">6.</span> <span class="toc-text">Git补丁管理(方便在多台机器上开发同步时用)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git暂存管理"><span class="toc-number">7.</span> <span class="toc-text">Git暂存管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git远程分支管理"><span class="toc-number">8.</span> <span class="toc-text">Git远程分支管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git远程仓库管理"><span class="toc-number">9.</span> <span class="toc-text">Git远程仓库管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建远程仓库"><span class="toc-number">10.</span> <span class="toc-text">创建远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可以命令设置跟踪远程库和本地库"><span class="toc-number">11.</span> <span class="toc-text">也可以命令设置跟踪远程库和本地库</span></a></li></ol>
+		
+		</div>
+		
+		<h3 id="查看、添加、提交、删除、找回，重置修改文件"><a href="#查看、添加、提交、删除、找回，重置修改文件" class="headerlink" title="查看、添加、提交、删除、找回，重置修改文件"></a>查看、添加、提交、删除、找回，重置修改文件</h3><p>git help <command> # 显示command的help</p>
+<p>git show # 显示某次提交的内容 git show $id</p>
+<p>git co – <file> # 抛弃工作区修改</file></p>
+<p>git co . # 抛弃工作区修改</p>
+<p>git add <file> # 将工作文件修改提交到本地暂存区</file></p>
+<p>git add . # 将所有修改过的工作文件提交暂存区</p>
+<p>git rm <file> # 从版本库中删除文件</file></p>
+<p>git rm <file> –cached # 从版本库中删除文件，但不删除文件</file></p>
+<p>git reset <file> # 从暂存区恢复到工作文件</file></p>
+<p>git reset – . # 从暂存区恢复到工作文件</p>
+<p>git reset –hard # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改</p>
+<p>git ci <file> git ci . git ci -a # 将git add, git rm和git ci等操作都合并在一起做　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　git ci -am “some comments”</file></p>
+<p>git ci –amend # 修改最后一次提交记录</p>
+<p>git revert &lt;$id&gt; # 恢复某次提交的状态，恢复动作本身也创建次提交对象</p>
+<p>git revert HEAD # 恢复最后一次提交的状态</p>
+<h3 id="查看文件diff"><a href="#查看文件diff" class="headerlink" title="查看文件diff"></a>查看文件diff</h3><p>git diff <file> # 比较当前文件和暂存区文件差异 git diff</file></p>
+<p>git diff <id1><id1><id2> # 比较两次提交之间的差异</id2></id1></id1></p>
+<p>git diff <branch1>..<branch2> # 在两个分支之间比较</branch2></branch1></p>
+<p>git diff –staged # 比较暂存区和版本库差异</p>
+<p>git diff –cached # 比较暂存区和版本库差异</p>
+<p>git diff –stat # 仅仅比较统计信息</p>
+<h3 id="查看提交记录"><a href="#查看提交记录" class="headerlink" title="查看提交记录"></a>查看提交记录</h3><p>git log git log <file> # 查看该文件每次提交记录</file></p>
+<p>git log -p <file> # 查看每次详细修改内容的diff</file></p>
+<p>git log -p -2 # 查看最近两次详细修改内容的diff</p>
+<p>git log –stat #查看提交统计信息</p>
+<p>tig</p>
+<p>Mac上可以使用tig代替diff和log，brew install tig</p>
+<p>Git 本地分支管理</p>
+<h3 id="查看、切换、创建和删除分支"><a href="#查看、切换、创建和删除分支" class="headerlink" title="查看、切换、创建和删除分支"></a>查看、切换、创建和删除分支</h3><p>git br -r # 查看远程分支</p>
+<p>git br <new_branch> # 创建新的分支</new_branch></p>
+<p>git br -v # 查看各个分支最后提交信息</p>
+<p>git br –merged # 查看已经被合并到当前分支的分支</p>
+<p>git br –no-merged # 查看尚未被合并到当前分支的分支</p>
+<p>git co <branch> # 切换到某个分支</branch></p>
+<p>git co -b <new_branch> # 创建新的分支，并且切换过去</new_branch></p>
+<p>git co -b <new_branch> <branch> # 基于branch创建新的new_branch</branch></new_branch></p>
+<p>git co $id # 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除</p>
+<p>git co $id -b <new_branch> # 把某次历史提交记录checkout出来，创建成一个分支</new_branch></p>
+<p>git br -d <branch> # 删除某个分支</branch></p>
+<p>git br -D <branch> # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</branch></p>
+<h3 id="分支合并和rebase"><a href="#分支合并和rebase" class="headerlink" title="分支合并和rebase"></a>分支合并和rebase</h3><p>git merge <branch> # 将branch分支合并到当前分支</branch></p>
+<p>git merge origin/master –no-ff # 不要Fast-Foward合并，这样可以生成merge提交</p>
+<p>git rebase master <branch> # 将master rebase到branch，相当于： git co <branch> &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge <branch></branch></branch></branch></p>
+<h3 id="Git补丁管理-方便在多台机器上开发同步时用"><a href="#Git补丁管理-方便在多台机器上开发同步时用" class="headerlink" title="Git补丁管理(方便在多台机器上开发同步时用)"></a>Git补丁管理(方便在多台机器上开发同步时用)</h3><p>git diff &gt; ../sync.patch # 生成补丁</p>
+<p>git apply ../sync.patch # 打补丁</p>
+<p>git apply –check ../sync.patch #测试补丁能否成功</p>
+<h3 id="Git暂存管理"><a href="#Git暂存管理" class="headerlink" title="Git暂存管理"></a>Git暂存管理</h3><p>git stash # 暂存</p>
+<p>git stash list # 列所有stash</p>
+<p>git stash apply # 恢复暂存的内容</p>
+<p>git stash drop # 删除暂存区</p>
+<h3 id="Git远程分支管理"><a href="#Git远程分支管理" class="headerlink" title="Git远程分支管理"></a>Git远程分支管理</h3><p>git pull # 抓取远程仓库所有分支更新并合并到本地</p>
+<p>git pull –no-ff # 抓取远程仓库所有分支更新并合并到本地，不要快进合并</p>
+<p>git fetch origin # 抓取远程仓库更新</p>
+<p>git merge origin/master # 将远程主分支合并到本地当前分支</p>
+<p>git co –track origin/branch # 跟踪某个远程分支创建相应的本地分支</p>
+<p>git co -b <local_branch> origin/<remote_branch> # 基于远程分支创建本地分支，功能同上</remote_branch></local_branch></p>
+<p>git push # push所有分支</p>
+<p>git push origin master # 将本地主分支推到远程主分支</p>
+<p>git push -u origin master # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)</p>
+<p>git push origin <local_branch> # 创建远程分支， origin是远程仓库名</local_branch></p>
+<p>git push origin <local_branch>:<remote_branch> # 创建远程分支</remote_branch></local_branch></p>
+<p>git push origin :<remote_branch> #先删除本地分支(git br -d <branch>)，然后再push删除远程分支</branch></remote_branch></p>
+<h3 id="Git远程仓库管理"><a href="#Git远程仓库管理" class="headerlink" title="Git远程仓库管理"></a>Git远程仓库管理</h3><p>GitHub</p>
+<p>git remote -v # 查看远程服务器地址和仓库名称</p>
+<p>git remote show origin # 查看远程服务器仓库状态</p>
+<p>git remote add origin git@ github:robbin/robbin_site.git # 添加远程仓库地址</p>
+<p>git remote set-url origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址) git remote rm <repository> # 删除远程仓库</repository></p>
+<h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p>git clone –bare robbin_site robbin_site.git # 用带版本的项目创建纯版本仓库</p>
+<p>scp -r my_project.git git@ git.csdn.net:~ # 将纯仓库上传到服务器上</p>
+<p>mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git –bare init # 在服务器创建纯仓库</p>
+<p>git remote add origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址</p>
+<p>git push -u origin master # 客户端首次提交</p>
+<p>git push -u origin develop # 首次将本地develop分支提交到远程develop分支，并且track</p>
+<p>git remote set-head origin master # 设置远程仓库的HEAD指向master分支</p>
+<h3 id="也可以命令设置跟踪远程库和本地库"><a href="#也可以命令设置跟踪远程库和本地库" class="headerlink" title="也可以命令设置跟踪远程库和本地库"></a>也可以命令设置跟踪远程库和本地库</h3><p>git branch –set-upstream master origin/master</p>
+<p>git branch –set-upstream develop origin/develop</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/git/">git</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/05/08/git常用命令/" data-title="git常用命令 | nico&#39;blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2017/05/08/git-常用命令/" title="git 常用命令">
+  <strong>上一篇：</strong><br/>
+  <span>
+  git 常用命令</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看、添加、提交、删除、找回，重置修改文件"><span class="toc-number">1.</span> <span class="toc-text">查看、添加、提交、删除、找回，重置修改文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看文件diff"><span class="toc-number">2.</span> <span class="toc-text">查看文件diff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看提交记录"><span class="toc-number">3.</span> <span class="toc-text">查看提交记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看、切换、创建和删除分支"><span class="toc-number">4.</span> <span class="toc-text">查看、切换、创建和删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支合并和rebase"><span class="toc-number">5.</span> <span class="toc-text">分支合并和rebase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git补丁管理-方便在多台机器上开发同步时用"><span class="toc-number">6.</span> <span class="toc-text">Git补丁管理(方便在多台机器上开发同步时用)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git暂存管理"><span class="toc-number">7.</span> <span class="toc-text">Git暂存管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git远程分支管理"><span class="toc-number">8.</span> <span class="toc-text">Git远程分支管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git远程仓库管理"><span class="toc-number">9.</span> <span class="toc-text">Git远程仓库管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建远程仓库"><span class="toc-number">10.</span> <span class="toc-text">创建远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可以命令设置跟踪远程库和本地库"><span class="toc-number">11.</span> <span class="toc-text">也可以命令设置跟踪远程库和本地库</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="nico1988" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/angular/" title="angular">angular<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/svn/" title="svn">svn<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/es6/" title="es6">es6<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/toll/" title="toll">toll<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/javascript/" title="javascript">javascript<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wxapp/" title="wxapp">wxapp<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/思维导图/" title="思维导图">思维导图<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue-js/" title="Vue.js">Vue.js<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">Tag Cloud</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/toll/" style="font-size: 10px;">toll</a> <a href="/tags/wxapp/" style="font-size: 10px;">wxapp</a> <a href="/tags/思维导图/" style="font-size: 10px;">思维导图</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://github.com/nico1988/" target="_blank" title="nico&#39;s Blog">nico&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+<div style="margin-top:10px;border:1px solid silver;text-align:center;box-sizing:content-box">
+	<div style="display:inline-block;text-align:center">
+    <a href="">微信:maosheng88</a>
+    <br>
+    <a href=""><img src="" alt="">
+      <img src="/img/weixin.png" style="width:135px;height:135px"/>
+    </a>
+    <br>
+    <span>email:<br/><b style="color:DodgerBlue">13574161925</b>@163.com</span
+  </div>
+</div>
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m nico xia . <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/nico1988" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="nico xia">nico xia</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
