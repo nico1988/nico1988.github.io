@@ -4,26 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端工具集 | nico&#39;blog</title>
+    <title>bem | nico&#39;blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="nico xia">
     
 
     
-    <meta name="description" content="前端工具集编辑器 WebstormVisual Studio CodeSublimewebstormwebstormwebstorm  包管理工具 npmbower  前端构建工具 grunt（慢慢淘汰）gulpbrowser-fily  webpack  自动刷新工具 browser-sync  思维导图点击此处放大(PNG图片)">
-<meta name="keywords" content="toll">
+    <meta name="description" content="前端命名规范BEM的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。&amp;lt;form class=&amp;quot;search-form&amp;quot;&amp;gt;     &amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;se">
+<meta name="keywords" content="bem">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端工具集">
-<meta property="og:url" content="http://yoursite.com/2017/03/23/前端工具集/index.html">
+<meta property="og:title" content="bem">
+<meta property="og:url" content="http://yoursite.com/2017/05/11/bem/index.html">
 <meta property="og:site_name" content="nico'blog">
-<meta property="og:description" content="前端工具集编辑器 WebstormVisual Studio CodeSublimewebstormwebstormwebstorm  包管理工具 npmbower  前端构建工具 grunt（慢慢淘汰）gulpbrowser-fily  webpack  自动刷新工具 browser-sync  思维导图点击此处放大(PNG图片)">
-<meta property="og:image" content="http://oothzvg9p.bkt.clouddn.com/front-tool.png">
-<meta property="og:updated_time" content="2017-04-28T01:27:25.876Z">
+<meta property="og:description" content="前端命名规范BEM的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。&amp;lt;form class=&amp;quot;search-form&amp;quot;&amp;gt;     &amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;se">
+<meta property="og:updated_time" content="2017-05-11T14:34:20.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端工具集">
-<meta name="twitter:description" content="前端工具集编辑器 WebstormVisual Studio CodeSublimewebstormwebstormwebstorm  包管理工具 npmbower  前端构建工具 grunt（慢慢淘汰）gulpbrowser-fily  webpack  自动刷新工具 browser-sync  思维导图点击此处放大(PNG图片)">
-<meta name="twitter:image" content="http://oothzvg9p.bkt.clouddn.com/front-tool.png">
+<meta name="twitter:title" content="bem">
+<meta name="twitter:description" content="前端命名规范BEM的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。&amp;lt;form class=&amp;quot;search-form&amp;quot;&amp;gt;     &amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;se">
 
     
     <link rel="alternative" href="/atom.xml" title="nico&#39;blog" type="application/atom+xml">
@@ -86,14 +84,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/03/23/前端工具集/" title="前端工具集" itemprop="url">前端工具集</a>
+      <a href="/2017/05/11/bem/" title="bem" itemprop="url">bem</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-03-23T07:58:15.000Z" itemprop="datePublished"> Published 2017-03-23</time>
+    <time datetime="2017-05-11T14:32:43.000Z" itemprop="datePublished"> Published 2017-05-11</time>
   </p>
 </header>
 	<div class="article-content">
@@ -101,24 +99,16 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端工具集"><span class="toc-number">1.</span> <span class="toc-text">前端工具集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑器"><span class="toc-number">1.1.</span> <span class="toc-text">编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包管理工具"><span class="toc-number">1.2.</span> <span class="toc-text">包管理工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端构建工具"><span class="toc-number">1.3.</span> <span class="toc-text">前端构建工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动刷新工具"><span class="toc-number">1.4.</span> <span class="toc-text">自动刷新工具</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端命名规范"><span class="toc-number">1.</span> <span class="toc-text">前端命名规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BEM的意思就是块（block）、元素（element）、修饰符（modifier）-是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。"><span class="toc-number">1.1.</span> <span class="toc-text">BEM的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="前端工具集"><a href="#前端工具集" class="headerlink" title="前端工具集"></a>前端工具集</h2><h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><blockquote>
-<p>Webstorm<br>Visual Studio Code<br>Sublime<br>webstorm<br>webstorm<br>webstorm</p>
-</blockquote>
-<h3 id="包管理工具"><a href="#包管理工具" class="headerlink" title="包管理工具"></a>包管理工具</h3><blockquote>
-<p>npm<br>bower</p>
-</blockquote>
-<h3 id="前端构建工具"><a href="#前端构建工具" class="headerlink" title="前端构建工具"></a>前端构建工具</h3><blockquote>
-<p>grunt（慢慢淘汰）<br>gulp<br>browser-fily  webpack</p>
-</blockquote>
-<h3 id="自动刷新工具"><a href="#自动刷新工具" class="headerlink" title="自动刷新工具"></a>自动刷新工具</h3><blockquote>
-<p>browser-sync</p>
-</blockquote>
-<p>思维导图<br><a href="http://oothzvg9p.bkt.clouddn.com/front-tool.png" target="_blank" rel="external">点击此处放大(PNG图片)</a><br><img src="http://oothzvg9p.bkt.clouddn.com/front-tool.png" alt=""></p>
-  
+		<h2 id="前端命名规范"><a href="#前端命名规范" class="headerlink" title="前端命名规范"></a>前端命名规范</h2><h3 id="BEM的意思就是块（block）、元素（element）、修饰符（modifier）-是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。"><a href="#BEM的意思就是块（block）、元素（element）、修饰符（modifier）-是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。" class="headerlink" title="BEM的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。"></a>BEM的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。</h3><pre><code>&lt;form class=&quot;search-form&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;search-form__username&quot;&gt;
+    &lt;input type=&quot;password&quot; class=&quot;search-form__password&quot;&gt;
+    &lt;button id=&quot;J_Submit&quot; class=&quot;search-form__submit--active&quot;&gt;&lt;/button&gt;
+&lt;form&gt;
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -126,7 +116,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/toll/">toll</a>
+  <span></span> <a href="/tags/bem/">bem</a>
   </div>
 
 </div>
@@ -135,7 +125,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/03/23/前端工具集/" data-title="前端工具集 | nico&#39;blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/05/11/bem/" data-title="bem | nico&#39;blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -149,21 +139,13 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/03/20/词法作用域/" title="词法作用域">
+ <a href="/2017/05/08/start-learning-vue/" title="start learning vue">
   <strong>上一篇：</strong><br/>
   <span>
-  词法作用域</span>
+  start learning vue</span>
 </a>
 </div>
 
-
-<div class="next">
-<a href="/2017/04/04/基于mvc思想的用户注册/"  title="基于MVC思想的用户注册">
- <strong>下一篇：</strong><br/> 
- <span>基于MVC思想的用户注册
-</span>
-</a>
-</div>
 
 </nav>
 
@@ -175,7 +157,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端工具集"><span class="toc-number">1.</span> <span class="toc-text">前端工具集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑器"><span class="toc-number">1.1.</span> <span class="toc-text">编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包管理工具"><span class="toc-number">1.2.</span> <span class="toc-text">包管理工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端构建工具"><span class="toc-number">1.3.</span> <span class="toc-text">前端构建工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动刷新工具"><span class="toc-number">1.4.</span> <span class="toc-text">自动刷新工具</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端命名规范"><span class="toc-number">1.</span> <span class="toc-text">前端命名规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BEM的意思就是块（block）、元素（element）、修饰符（modifier）-是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。"><span class="toc-number">1.1.</span> <span class="toc-text">BEM的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。</span></a></li></ol></li></ol>
  
   </div>
 

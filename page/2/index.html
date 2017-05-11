@@ -81,6 +81,220 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/04/19/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-19T13:49:20.166Z" itemprop="datePublished"> Published 2017-04-19</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/04/基于mvc思想的用户注册/" title="基于MVC思想的用户注册" itemprop="url">基于MVC思想的用户注册</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-04T08:26:01.000Z" itemprop="datePublished"> Published 2017-04-04</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="angular利用mvc思想实现注册小demo"><a href="#angular利用mvc思想实现注册小demo" class="headerlink" title="angular利用mvc思想实现注册小demo"></a>angular利用mvc思想实现注册小demo</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;注册案例&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 2.加上ng-app指令 --&gt;
+    &lt;!-- view 开始 --&gt;
+    &lt;table ng-app=&quot;myApp&quot; border=&quot;1&quot; ng-controller=&quot;demoController&quot;&gt;
+        &lt;tr&gt;
+            &lt;td&gt;用户名:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;username&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;密码:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;password&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;确认密码:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;confirm&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;是否同意:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;checkbox&quot; ng-model=&quot;isAgree&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;{{msg}}&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;注册按钮:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;button&quot; ng-click=&quot;register()&quot; value=&quot;注册&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;!-- view 结束 --&gt;
+    &lt;!-- 1.引入 anglar.js --&gt;
+    &lt;script src=&quot;node_modules/angular/angular.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // 3.创建模块
+        var app = angular.module(&apos;myApp&apos;,[]);
+        // controller 开始
+        // 4.创建控制器
+        app.controller(&apos;demoController&apos;,function($scope){
+            // 初始化数据模型
+            $scope.username=&apos;&apos;;
+            $scope.password=&apos;&apos;;
+            $scope.confirm=&apos;&apos;;
+            $scope.isAgree=false;
+            $scope.msg=&apos;&apos;;
+            // 初始化行为模型
+            $scope.register=function(){
+                // 进行数据校验
+                if($scope.username.length&gt;6){
+                    $scope.msg=&apos;用户名太长&apos;;
+                    return;
+                }
+
+                if($scope.password!=$scope.confirm){
+                    $scope.msg=&apos;确认密码和密码不相等&apos;;
+                    return;
+                }
+                if(!$scope.isAgree){
+                    $scope.msg=&apos;请同意用户协议&apos;;
+                    return;
+                }
+
+                var user = new User($scope.username,$scope.password);
+                var result = user.save();
+                if(result){
+                    $scope.msg=&apos;注册成功&apos;;
+
+                }else{
+                    $scope.msg=&apos;用户名已存在&apos;;
+                }
+            }
+        });
+        // controller 结束
+
+
+
+        // model  开始 创建User构造函数
+        function User(username,password){
+            this.username=username;
+            this.password=password;
+        }
+
+
+        User.prototype.save=function(){
+            //localStorage
+            var data = localStorage.getItem(&apos;user&apos;)||&apos;[]&apos;;
+            ///[{username:&apos;a&apos;},{username:&apos;b&apos;}]
+            var users = JSON.parse(data);
+
+            // 判断用户名是否存在
+            for (var i = 0; i &lt; users.length; i++) {
+                var item =users[i];
+                if(item.username==this.username){
+                    return false;
+                }
+            }
+            users.push({username:this.username,password:this.password});
+
+            localStorage.setItem(&apos;user&apos;,JSON.stringify(users));
+            return true;
+
+        }
+        // getUser
+        // model 结束
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/angular/">angular</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/03/23/前端工具集/" title="前端工具集" itemprop="url">前端工具集</a>
   </h1>
   <p class="article-author">By
@@ -438,125 +652,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/19/my-first-hexo-blog-article/" title="my first hexo blog article" itemprop="url">my first hexo blog article</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-19T14:09:34.000Z" itemprop="datePublished"> Published 2017-01-19</time>
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>##你好，欢迎来到我的个人技术博客。<br>这是我的第一次写作，希望有个很好的开端</p>
-<p>关于创建这个博客的用意<br></p>
-<p>###交流技术</p>
-<p>###记录心得</p>
-<p>###交流想法</p>
-<p>###谈谈心得</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/19/hexo/" title="my first hexo blog article" itemprop="url">my first hexo blog article</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-19T14:09:34.000Z" itemprop="datePublished"> Published 2017-01-19</time>
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>hexo 常用命令<br>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #将.deploy目录部署到GitHub<br>hexo help  #查看帮助<br>hexo version  #查看Hexo的版本</p>
-<p>每次部署的步骤，可按以下三步来进行。</p>
-<pre><code>hexo clean
-
-hexo generate
-
-hexo deploy
-</code></pre>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
@@ -603,11 +698,19 @@ hexo deploy
 			
 		
 			
-				<li><a href="/tags/svn/" title="svn">svn<sup>1</sup></a></li>
+				<li><a href="/tags/es6/" title="es6">es6<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/es6/" title="es6">es6<sup>1</sup></a></li>
+				<li><a href="/tags/vue/" title="vue">vue<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bem/" title="bem">bem<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue-js/" title="Vue.js">Vue.js<sup>1</sup></a></li>
 			
 		
 			
@@ -627,7 +730,7 @@ hexo deploy
 			
 		
 			
-				<li><a href="/tags/Vue-js/" title="Vue.js">Vue.js<sup>1</sup></a></li>
+				<li><a href="/tags/svn/" title="svn">svn<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -638,7 +741,7 @@ hexo deploy
   <div class="tagcloudlist">
     <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/toll/" style="font-size: 10px;">toll</a> <a href="/tags/wxapp/" style="font-size: 10px;">wxapp</a> <a href="/tags/思维导图/" style="font-size: 10px;">思维导图</a>
+       <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/toll/" style="font-size: 10px;">toll</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wxapp/" style="font-size: 10px;">wxapp</a> <a href="/tags/思维导图/" style="font-size: 10px;">思维导图</a>
     </div>
   </div>
 
