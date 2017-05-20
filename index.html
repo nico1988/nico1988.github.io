@@ -43,7 +43,7 @@
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="nico&#39;blog">nico&#39;blog</a></h1>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -81,6 +81,67 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/05/20/雅虎前端14条优化原则/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
+		
+  <p class="article-time">
+    <time datetime="2017-05-20T07:30:41.698Z" itemprop="datePublished"> Published 2017-05-20</time>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="【性能优化】Yahoo网站优化的14条规则"><a href="#【性能优化】Yahoo网站优化的14条规则" class="headerlink" title="【性能优化】Yahoo网站优化的14条规则"></a>【性能优化】Yahoo网站优化的14条规则</h2><h3 id="1-减少HTTP请求"><a href="#1-减少HTTP请求" class="headerlink" title="1.减少HTTP请求"></a>1.减少HTTP请求</h3><p>　　减少HTTP请求的方式很多，常见的包括CSS Sprites、合并JS和CSS、图片地图等。遵守这条规则可以改善首次访问网站的响应时间。</p>
+<h3 id="2-使用CDN（内容发布网络）"><a href="#2-使用CDN（内容发布网络）" class="headerlink" title="2.使用CDN（内容发布网络）"></a>2.使用CDN（内容发布网络）</h3><p>　　只有10%-20%的最终用户响应时间花在了下载HTML文档上，其余的80%-90%时间花在了下载页面中的所有组件上。如果web服务器离服务器更近，则一个HTTP请求的响应时间将缩短。CDN是一组分布在多个不同地理位置的web服务器，每个服务器都拥有所有网站的文件副本，用户访问网站时，就可以从离用户最近的服务器发送所需的文件给客户端。Yahoo！Shopping网站使用CDN后响应时间减少了20%。</p>
+<h3 id="3-添加Expires头"><a href="#3-添加Expires头" class="headerlink" title="3.添加Expires头"></a>3.添加Expires头</h3><p>　　通过使用Expires头，浏览器可以在用户首次访问网站后，将页面的资源缓存下来。可以为Expires指定过期时间，在指定时间后，缓存将失效。</p>
+<h3 id="4-启用Gzip"><a href="#4-启用Gzip" class="headerlink" title="4.启用Gzip"></a>4.启用Gzip</h3><p>　　客户端可以通过HTTP请求中的Accept-Encoding头来标识对压缩的支持（Accept-Encoding：gzip,deflate），服务器看到请求中有这个头，就会使用客户端列出的一种方法来压缩响应。大多数网站使用gzip压缩了HTML。</p>
+<h3 id="5-将CSS放在顶部"><a href="#5-将CSS放在顶部" class="headerlink" title="5.将CSS放在顶部"></a>5.将CSS放在顶部</h3><p>　　将CSS放在底部会发生无样式闪烁，浏览器会先加载HTML，然后加载CSS，会出现一段没有任何样式的“白屏时间”。而将CSS放在顶部则能规避这个问题。</p>
+<h3 id="6-将脚本放在底部"><a href="#6-将脚本放在底部" class="headerlink" title="6.将脚本放在底部"></a>6.将脚本放在底部</h3><p>　　将脚本放在顶部或页面中，浏览器会对script标签内的内容进行解析，从而阻塞样式的渲染。除此之外，HTTP1.1规范建议浏览器从每个主机并行的下载两个组件，在高版本的IE和chrome、Firefox等浏览器则支持并行下载六个组件。但script会阻塞并行下载。因此我们应该将脚本放在底部。</p>
+<h3 id="7-避免CSS表达式"><a href="#7-避免CSS表达式" class="headerlink" title="7.避免CSS表达式"></a>7.避免CSS表达式</h3><p>　　CSS表达式具备求值计算能力，然而每次页面发生重绘时，CSS表达式会影响页面的加载时间。</p>
+<h3 id="8-使用外部JavaScript和CSS"><a href="#8-使用外部JavaScript和CSS" class="headerlink" title="8.使用外部JavaScript和CSS"></a>8.使用外部JavaScript和CSS</h3><p>　　使用大量内联的JS和CSS就不能实现样式、结构、行为的分离，这样会在维护上造成很多麻烦，同时也会增大网页的体积。</p>
+<h3 id="9-减少DNS查询"><a href="#9-减少DNS查询" class="headerlink" title="9.减少DNS查询"></a>9.减少DNS查询</h3><p>　　通过使用Keep-Alive和较少的域名可以减少DNS查询</p>
+<h3 id="10-精简JavaScript和CSS"><a href="#10-精简JavaScript和CSS" class="headerlink" title="10.精简JavaScript和CSS"></a>10.精简JavaScript和CSS</h3><p>　　进行代码混淆可以压缩JS文件的大小，这个通过gulp等构建工具可以自动化的进行。</p>
+<h3 id="11-避免重定向"><a href="#11-避免重定向" class="headerlink" title="11.避免重定向"></a>11.避免重定向</h3><p>　　重定向用于将用户从一个URL重新路由到另一个URL。重定向有很多种，包括301永久重定向、302临时重定向，304 Not Modified并不是真正的重定向，它是用来响应Get请求，避免下载已经存在于浏览器缓存中的数据。在URL的结尾加上斜线（/）可以避免一部分重定向。</p>
+<h3 id="12-移除重复脚本"><a href="#12-移除重复脚本" class="headerlink" title="12.移除重复脚本"></a>12.移除重复脚本</h3><h3 id="13-配置ETag"><a href="#13-配置ETag" class="headerlink" title="13.配置ETag"></a>13.配置ETag</h3><p>　　实体标签（Entity Tag）是web服务器和浏览器用于确认缓存资源的有效性的一种机制，它可以检测浏览器中缓存的资源与原始服务器上的资源是否匹配。ETag是唯一标识资源的一个特定版本的字符串，浏览器要验证一个资源，它会使用If-None-Match头将ETag传回原始服务器。如果ETag是匹配的，就会返回304状态码，从而使用浏览器缓存。</p>
+<h3 id="14-缓存Ajax"><a href="#14-缓存Ajax" class="headerlink" title="14.缓存Ajax"></a>14.缓存Ajax</h3><p>　　确保Ajax请求具有长久的Expires头</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/05/12/Vue 生命周期函数的理解/" title="Vue 生命周期理解" itemprop="url">Vue 生命周期理解</a>
   </h1>
   <p class="article-author">By
@@ -88,7 +149,7 @@
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-12T14:02:24.000Z" itemprop="datePublished"> 发表于 2017-05-12</time>
+    <time datetime="2017-05-12T14:02:24.000Z" itemprop="datePublished"> Published 2017-05-12</time>
   </p>
 </header>
     <div class="article-content">
@@ -153,7 +214,7 @@ destroyed    -&gt;   销毁之后
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-11T14:32:43.000Z" itemprop="datePublished"> 发表于 2017-05-11</time>
+    <time datetime="2017-05-11T14:32:43.000Z" itemprop="datePublished"> Published 2017-05-11</time>
   </p>
 </header>
     <div class="article-content">
@@ -211,7 +272,7 @@ destroyed    -&gt;   销毁之后
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-08T13:44:48.000Z" itemprop="datePublished"> 发表于 2017-05-08</time>
+    <time datetime="2017-05-08T13:44:48.000Z" itemprop="datePublished"> Published 2017-05-08</time>
   </p>
 </header>
     <div class="article-content">
@@ -265,7 +326,7 @@ destroyed    -&gt;   销毁之后
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-08T12:39:42.000Z" itemprop="datePublished"> 发表于 2017-05-08</time>
+    <time datetime="2017-05-08T12:39:42.000Z" itemprop="datePublished"> Published 2017-05-08</time>
   </p>
 </header>
     <div class="article-content">
@@ -394,7 +455,7 @@ destroyed    -&gt;   销毁之后
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-08T12:34:43.000Z" itemprop="datePublished"> 发表于 2017-05-08</time>
+    <time datetime="2017-05-08T12:34:43.000Z" itemprop="datePublished"> Published 2017-05-08</time>
   </p>
 </header>
     <div class="article-content">
@@ -442,7 +503,7 @@ destroyed    -&gt;   销毁之后
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-08T08:50:26.000Z" itemprop="datePublished"> 发表于 2017-05-08</time>
+    <time datetime="2017-05-08T08:50:26.000Z" itemprop="datePublished"> Published 2017-05-08</time>
   </p>
 </header>
     <div class="article-content">
@@ -503,7 +564,7 @@ destroyed    -&gt;   销毁之后
 		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-08T03:43:43.000Z" itemprop="datePublished"> 发表于 2017-05-08</time>
+    <time datetime="2017-05-08T03:43:43.000Z" itemprop="datePublished"> Published 2017-05-08</time>
   </p>
 </header>
     <div class="article-content">
@@ -543,122 +604,21 @@ destroyed    -&gt;   销毁之后
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/05/05/定时器中的this指向问题/" title="JavaScript 定时器中 this的指向" itemprop="url">JavaScript 定时器中 this的指向</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="nico xia" target="_blank" itemprop="author">nico xia</a>
-		
-  <p class="article-time">
-    <time datetime="2017-05-05T04:53:13.000Z" itemprop="datePublished"> 发表于 2017-05-05</time>
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。"><a href="#使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。" class="headerlink" title="使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。"></a>使用js中的定时器（setInterval，setTimeout），很容易会遇到this指向的问题。</h2><pre><code>var name = &apos;my name is window&apos;;
-var obj = {
-    name: &apos;my name is obj&apos;,
-    fn: function () {
-        var timer = null;
-        clearInterval(timer);
-        timer = setInterval(function () {
-            console.log(this.name);  //my name is window
-        }, 1000)
-    }
-}
-</code></pre><h5 id="在这里，从this-name可以看出this的指向是window。"><a href="#在这里，从this-name可以看出this的指向是window。" class="headerlink" title="在这里，从this.name可以看出this的指向是window。"></a>在这里，从this.name可以看出this的指向是window。</h5><h5 id="如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种："><a href="#如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种：" class="headerlink" title="如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种："></a>如果没有特殊指向，setInterval和setTimeout的回调函数中this的指向都是window。这是因为JS的定时器方法是定义在window下的。但是平时很多场景下，都需要修改this的指向。这里总结了几种：</h5><p>1、最常用的方法：在外部函数中将this存为一个变量，回调函数中使用该变量，而不是直接使用this。</p>
-<pre><code>var name = &apos;my name is window&apos;;
-var obj = {
-    name: &apos;my name is obj&apos;,
-    fn: function () {
-        var that = this;
-        var timer = null;
-        clearInterval(timer);
-        timer = setInterval(function () {
-            console.log(that.name);   //my name is obj
-        }, 1000)
-    }
-}
-</code></pre><h3 id="在fn中加了var-that-this-回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。"><a href="#在fn中加了var-that-this-回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。" class="headerlink" title="在fn中加了var that = this; 回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。"></a>在fn中加了var that = this; 回调函数中使用that代替this即可。这种方法最常见，使用也最广泛。</h3><p>2、使用bind()方法（bind()为ES5的标准，低版本IE下有兼容问题，可以引入es5-shim.js解决）</p>
-<h5 id="bind-的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。"><a href="#bind-的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。" class="headerlink" title="bind()的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。"></a>bind()的作用类似call和apply，都是修改this指向。但是call和apply是修改this指向后函数会立即执行，而bind则是返回一个新的函数，它会创建一个与原来函数主体相同的新函数，新函数中的this指向传入的对象。</h5><pre><code>var name = &apos;my name is window&apos;;
-var obj = {
-    name: &apos;my name is obj&apos;,
-    fn: function () {
-        var timer = null;
-        clearInterval(timer);
-        timer = setInterval(function () {
-            console.log(this.name);   //my name is obj
-        }.bind(this), 1000)
-    }
-}
-</code></pre><h5 id="在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。"><a href="#在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。" class="headerlink" title="在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。"></a>在这里为什么不能用call和apply，是因为call和apply不是返回函数，而是立即执行函数，那么，就失去了定时器的作用。</h5><p>3、使用es6的箭头函数：箭头函数的最大作用就是this指向。</p>
-<pre><code>var name = &apos;my name is window&apos;;
-var obj = {
-    name: &apos;my name is obj&apos;,
-    fn: function () {
-        var timer = null;
-        clearInterval(timer);
-        timer = setInterval(() =&gt; {
-            console.log(this.name);  //my name is obj
-        }, 1000)
-    }
-}
-</code></pre><h5 id="箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim-js才可以。"><a href="#箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim-js才可以。" class="headerlink" title="箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim.js才可以。"></a>箭头函数没有自己的this，它的this继承自外部函数的作用域。所以，在该例中，定时器回调函数中的this，是继承了fn的this。当然箭头函数也有兼容问题，要是兼容低版本ie，需要使用babel编译，并且引入es5-shim.js才可以。</h5>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/javascript/">javascript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github 名片</p>
+<p class="asidetitle">Github Card</p>
 <div class="github-card" data-github="nico1988" data-width="220" data-height="119" data-theme="medium">
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -670,7 +630,7 @@ var obj = {
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -686,11 +646,11 @@ var obj = {
 			
 		
 			
-				<li><a href="/tags/es6/" title="es6">es6<sup>1</sup></a></li>
+				<li><a href="/tags/Vue-js/" title="Vue.js">Vue.js<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+				<li><a href="/tags/es6/" title="es6">es6<sup>1</sup></a></li>
 			
 		
 			
@@ -698,7 +658,7 @@ var obj = {
 			
 		
 			
-				<li><a href="/tags/vue/" title="vue">vue<sup>1</sup></a></li>
+				<li><a href="/tags/svn/" title="svn">svn<sup>1</sup></a></li>
 			
 		
 			
@@ -706,15 +666,7 @@ var obj = {
 			
 		
 			
-				<li><a href="/tags/Vue-js/" title="Vue.js">Vue.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/toll/" title="toll">toll<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/javascript/" title="javascript">javascript<sup>1</sup></a></li>
+				<li><a href="/tags/vue/" title="vue">vue<sup>1</sup></a></li>
 			
 		
 			
@@ -726,7 +678,15 @@ var obj = {
 			
 		
 			
-				<li><a href="/tags/svn/" title="svn">svn<sup>1</sup></a></li>
+				<li><a href="/tags/toll/" title="toll">toll<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/javascript/" title="javascript">javascript<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -735,7 +695,7 @@ var obj = {
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">标签云</p>
+    <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/toll/" style="font-size: 10px;">toll</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wxapp/" style="font-size: 10px;">wxapp</a> <a href="/tags/思维导图/" style="font-size: 10px;">思维导图</a>
     </div>
@@ -743,7 +703,7 @@ var obj = {
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -765,7 +725,7 @@ var obj = {
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 <div style="margin-top:10px;border:1px solid silver;text-align:center;box-sizing:content-box">
@@ -924,7 +884,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
